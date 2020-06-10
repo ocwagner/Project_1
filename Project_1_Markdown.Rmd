@@ -3,9 +3,9 @@ title: "Project 1 - Accessing the NHL API for Penguins Data"
 author: "Owen Wagner"
 date: "6/5/2020"
 output: 
-  html_document:
+ rmarkdown::github_document:
     toc: true
-    toc depth: 3
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE, warning=FALSE, message=FALSE}
