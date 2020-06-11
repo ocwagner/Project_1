@@ -200,12 +200,15 @@ tidy_goalie_table<-PIT_goalie_table%>%
   
 
 tidy_goalie_table%>%
+  replace(is.na(.),0)%>%
   ggplot(aes(x=reorder(lastName,desc(total_games)),y=games))+
   geom_col(aes(fill=game_outcome))+
   theme(axis.text.x = element_text(angle = 90))+
   xlab("Goalie")+
   ylab("Total Games")+
   labs(fill="Game Outcome")
+
+View(tidy_goalie_table)
 
 ###Skate stats------------------------------------
 

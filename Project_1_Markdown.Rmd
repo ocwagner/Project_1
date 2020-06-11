@@ -224,7 +224,7 @@ best_years<-full_join(accolades_table,seasons_table)%>%
   mutate("Accolade"=first_nice_names)%>%
   filter(Accolade != "FRANCHISE ID" & Accolade !="FRANCHISE NAME")
 
-datatable(best_years)
+kable(best_years)
 ```
 
 ### Interactive Streak Kable
@@ -237,7 +237,7 @@ second_nice_names<-toupper(gsub("([[:lower:]])([[:upper:]])", "\\1 \\2", streak_
 best_streaks<-full_join(streak_table,dates_table)%>%
   mutate("Accolade"=second_nice_names)
 
-datatable(best_streaks)
+kable(best_streaks)
 ```
 
 ## Some Pittsburgh Goalie Stats
