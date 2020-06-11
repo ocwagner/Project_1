@@ -324,18 +324,26 @@ best_years<-full_join(accolades_table,seasons_table)%>%
     ## Joining, by = "Accolade"
 
 ``` r
-datatable(best_years)
+kable(best_years)
 ```
 
-<!--html_preserve-->
-
-<div id="htmlwidget-178f99272dc14905b0bf" class="datatables html-widget" style="width:100%;height:auto;">
-
-</div>
-
-<script type="application/json" data-for="htmlwidget-178f99272dc14905b0bf">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["FEWEST GOALS","FEWEST GOALS AGAINST","FEWEST LOSSES","FEWEST POINTS","FEWEST TIES","FEWEST WINS","MOST GAME GOALS","MOST GOALS","MOST GOALS AGAINST","MOST LOSSES","MOST PENALTY MINUTES","MOST POINTS","MOST SHUTOUTS","MOST TIES","MOST WINS"],["182","188","21","38","4","16","12","367","394","58","2674","119","10","20","56"],["1969-70 (76)","1997-98 (82)","1992-93 (84), 2016-17 (82)","1983-84 (80)","1995-96 (82)","1983-84 (80)",null,"1992-93 (84)","1982-83 (80)","1983-84 (80)","1988-89 (80)","1992-93 (84)","2014-15 (82)","1970-71 (78)","1992-93 (84)"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Accolade<\/th>\n      <th>Metric<\/th>\n      <th>Season<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
-
-<!--/html_preserve-->
+| Accolade             | Metric | Season                     |
+| :------------------- | :----- | :------------------------- |
+| FEWEST GOALS         | 182    | 1969-70 (76)               |
+| FEWEST GOALS AGAINST | 188    | 1997-98 (82)               |
+| FEWEST LOSSES        | 21     | 1992-93 (84), 2016-17 (82) |
+| FEWEST POINTS        | 38     | 1983-84 (80)               |
+| FEWEST TIES          | 4      | 1995-96 (82)               |
+| FEWEST WINS          | 16     | 1983-84 (80)               |
+| MOST GAME GOALS      | 12     | NA                         |
+| MOST GOALS           | 367    | 1992-93 (84)               |
+| MOST GOALS AGAINST   | 394    | 1982-83 (80)               |
+| MOST LOSSES          | 58     | 1983-84 (80)               |
+| MOST PENALTY MINUTES | 2674   | 1988-89 (80)               |
+| MOST POINTS          | 119    | 1992-93 (84)               |
+| MOST SHUTOUTS        | 10     | 2014-15 (82)               |
+| MOST TIES            | 20     | 1970-71 (78)               |
+| MOST WINS            | 56     | 1992-93 (84)               |
 
 ### Interactive Streak Kable
 
@@ -351,18 +359,23 @@ best_streaks<-full_join(streak_table,dates_table)%>%
     ## Joining, by = "Accolade"
 
 ``` r
-datatable(best_streaks)
+kable(best_streaks)
 ```
 
-<!--html_preserve-->
-
-<div id="htmlwidget-27f738b9b04c71b577d9" class="datatables html-widget" style="width:100%;height:auto;">
-
-</div>
-
-<script type="application/json" data-for="htmlwidget-27f738b9b04c71b577d9">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12"],["HOME LOSS","HOME POINT","HOME WIN","HOME WINLESS","LOSS","POINT","ROAD LOSS","ROAD POINT","ROAD WIN","ROAD WINLESS","WIN","WINLESS"],[14,20,13,16,13,18,18,8,8,18,17,6],["Dec 31 2003 - Feb 22 2004","Nov 30 1974 - Feb 22 1975","Nov 15 2013 - Jan 15 2014","Dec 31 2003 - Mar 04 2004","Jan 13 2004 - Feb 12 2004","Mar 09 1993 - Apr 14 1993","Dec 23 1982 - Mar 04 1983","Jan 13 2007 - Feb 16 2007, Mar 11 2016 - Apr 07 2016","Mar 11 2016 - Apr 07 2016","Oct 25 1970 - Jan 14 1971, Dec 23 1982 - Mar 04 1983","Mar 09 1993 - Apr 10 1993","Feb 20 2020 - Feb 29 2020"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Accolade<\/th>\n      <th>Streak<\/th>\n      <th>Dates<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-
-<!--/html_preserve-->
+| Accolade     | Streak | Dates                                                |
+| :----------- | -----: | :--------------------------------------------------- |
+| HOME LOSS    |     14 | Dec 31 2003 - Feb 22 2004                            |
+| HOME POINT   |     20 | Nov 30 1974 - Feb 22 1975                            |
+| HOME WIN     |     13 | Nov 15 2013 - Jan 15 2014                            |
+| HOME WINLESS |     16 | Dec 31 2003 - Mar 04 2004                            |
+| LOSS         |     13 | Jan 13 2004 - Feb 12 2004                            |
+| POINT        |     18 | Mar 09 1993 - Apr 14 1993                            |
+| ROAD LOSS    |     18 | Dec 23 1982 - Mar 04 1983                            |
+| ROAD POINT   |      8 | Jan 13 2007 - Feb 16 2007, Mar 11 2016 - Apr 07 2016 |
+| ROAD WIN     |      8 | Mar 11 2016 - Apr 07 2016                            |
+| ROAD WINLESS |     18 | Oct 25 1970 - Jan 14 1971, Dec 23 1982 - Mar 04 1983 |
+| WIN          |     17 | Mar 09 1993 - Apr 10 1993                            |
+| WINLESS      |      6 | Feb 20 2020 - Feb 29 2020                            |
 
 ## Some Pittsburgh Goalie Stats
 
